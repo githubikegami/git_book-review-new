@@ -1012,13 +1012,23 @@ span.btn-schedule.is-unsold-3 .icon-unsold:before {
 
 .user_show{
     margin: 0 auto;
-    width: 960px;
+    width: 900px;
+    // height: calc(100vh - 110px);
+}
+
+.user_title{
+    display: flex;
 }
 
 .user_image img{
     width: 150px;
     height: 200px;
 }
+
+.user_nickname{
+}
+
+
 
 // user/_comment.html.erb
 

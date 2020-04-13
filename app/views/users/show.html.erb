@@ -1,13 +1,16 @@
 <!--<div class="user_show_image">-->
 <div class="user_show">
-<div class="user_image"><%= image_tag @user.image %></div>
-<h2><span><%= @user.nickname %></span>さん</span></h2>
 
-
-    <% if current_user.id == @user.id %>
+    <div class="user_title">
+        <div class="user_image"><%= image_tag @user.image %></div>
+        <h2 class="user_nickname"><%= @user.nickname %>さん</h2>
+        
+        
+            <% if current_user.id == @user.id %>
         <%= link_to "プロフィール編集", edit_user_path(current_user), {:class => "btn btn-primary withripple" }%>
     <% end %>
-
+    </div>
+            <hr>
 
     <% if @comment.present? %>
 <h3><span><%= @user.nickname %></span>さんのレビューした書籍一覧</span></h3>
