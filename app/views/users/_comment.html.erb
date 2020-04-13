@@ -1,0 +1,16 @@
+
+          <%# question.user_answer(@user.id).text %>
+        <!--<small class='edit'>-->
+          <%# link_to '編集', edit_answer_path(question.user_answer(@user.id)) %>
+        <!--</small>-->
+            <div style="user_render">
+              <div class="bookreview_image_user" style="background-image: url(<%= comment.bookreview.image_url %>);"></div>
+              
+              
+                    <div class="title"><%= comment.bookreview.title %></div>
+                    <span class="star"><span class="rating-star"><i class="star-actived rate-<%= comment.rate %>0"></i></span></span>
+                    <p><%= comment.created_at.to_s(:datetime) %></p>                          
+                  <div class="user_review"><%= comment.text %></div>
+                  <%= link_to '削除',"/bookreview/:bookreview_id/comments/#{comment.id}", method: :delete %>
+                  <%= link_to '編集',"/bookreview/:bookreview_id/comments/#{comment.id}/edit/", method: :get %>
+            </div>

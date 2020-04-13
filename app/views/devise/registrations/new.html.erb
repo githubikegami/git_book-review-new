@@ -1,0 +1,43 @@
+<div class="wrapper_registrations_new">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="title">
+    <h2>新規登録</h2>
+  </div>
+
+  <div class="field1_registrations">
+    <%= f.label :email %><br />
+    <%= f.email_field :email,autofocus: true %>
+  </div>
+
+  <div class="field2">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> 文字以上)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password"%>
+  </div>
+
+  <div class="field3">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", :placeholder => 'パスワードを入力（確認）' %>
+  </div>
+  
+  <div class="field4"><%= f.label :nickname %><br />
+    <%= f.text_field :nickname %></div>
+  
+  <div class="field">
+    <%= f.file_field :image, class: "floating-label" %>
+  </div>
+
+  <div class="actions">
+   <%= f.submit "Sign up" %>
+  </div>
+  
+  <div class="aid2">
+<%= render "devise/shared/links" %>
+  </div>
+<% end %>
+</div>
+

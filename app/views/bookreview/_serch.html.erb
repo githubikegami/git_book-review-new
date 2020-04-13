@@ -1,0 +1,27 @@
+            <div class="box_wrapper">
+    <div class="box">
+        <div class="box_image_frame">
+            <a href="/bookreview/<%= bookreview.id %>">
+                <div class="box_image" style="background-image: url(<%= bookreview.image_url %>);">
+                </div>
+            </a>
+        </div>
+        <div class="box_title_frame">
+            <div class="box_title" title="<%= bookreview.title %>">
+            <%= bookreview.title %>
+            </div>
+            <div class="assess">
+                
+                      <% if bookreview.comments.present? %>
+                      <span class="rating-star">
+                        <i class="star-actived rate-<%= bookreview.comments.average(:rate).round %>0"></i>
+                      </span>
+                      <% else %>
+                      <span class="rating-star">
+                        <i class="star-actived rate-0"></i>
+                      </span>
+                      <% end %>                       
+            </div>
+        </div>
+    </div>
+</div>
