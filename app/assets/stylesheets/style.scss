@@ -216,6 +216,21 @@ footer small{
 //     margin: 0px auto;
 // }
 
+.field3_registrations {
+     text-align: center;
+     width: 320px;
+     margin: 0 auto;
+     transform: translate(0%, 12%);
+}
+
+.field3_registrations label{
+    color: #808080;
+    display: block;
+    text-align: left;
+    letter-spacing: 0.11em;
+    transform: translate(0%, -42%);
+}
+
 .field1_registrations {
     text-align: center;
     width: 320px;
@@ -237,7 +252,7 @@ footer small{
 }
 
 .wrapper_registrations_new {
-    transform: translate(0%, -5%);
+    transform: translate(0%, -8%);
 }
 
 .title {
@@ -254,7 +269,7 @@ em{
 }
 
 .field4{
-    transform: translate(0%, 0%);
+    transform: translate(0%, 16%);
     letter-spacing: 0.15em;
     width: 320px;
     margin: 0 auto;
@@ -272,7 +287,7 @@ input#user_nickname:focus {
 
 .field{
     text-align: center;
-    transform: translate(0%, -3%);
+    transform: translate(0%, 7%);
     letter-spacing: 0.11em;
     width: 320px;
     margin: 0 auto;
@@ -349,6 +364,7 @@ color: #FF4500;
 
 
 .field2 {
+     transform: translate(0%, -2%);
      text-align: center;
      width: 320px;
      margin: 0 auto;
@@ -364,10 +380,10 @@ color: #FF4500;
 
 
 .field3 {
-    //  display:none;
-     text-align: center;
-     width: 320px;
-     margin: 0 auto;
+     display:none;
+    //  text-align: center;
+    //  width: 320px;
+    //  margin: 0 auto;
 }
 
 .actions {
