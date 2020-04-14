@@ -206,21 +206,26 @@ footer small{
 // devise/registrations/new.html.erb
 // devise/sessions/new.html.erb
 
-// #error_explanation h2{
-//     color: orange;
-//     margin: 50px auto;
-// }
+#error_explanation h2{
+    transform: translate(30%, 555%);
+}
 
-// #error_explanation ul li{
-//     color: orange;
-//     margin: 0px auto;
-// }
+#error_explanation ul{
+    display: block;
+}
+
+#error_explanation ul li{
+    text-align: center;
+    transform: translate(0%, 472%);
+    list-style-type: none;
+    padding: 0.5em;
+}
 
 .field3_registrations {
      text-align: center;
      width: 320px;
      margin: 0 auto;
-     transform: translate(0%, 12%);
+     transform: translate(0%, 0%);
 }
 
 .field3_registrations label{
