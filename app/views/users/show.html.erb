@@ -4,7 +4,7 @@
     <div class="user_title">
         <div class="user_image"><%= image_tag @user.image %></div>
         <h2 class="user_nickname"><%= @user.nickname %>さん</h2>
-        
+        <%= @user.text %>
         
             <% if current_user.id == @user.id %>
         <%= link_to "プロフィール編集", edit_user_path(current_user), {:class => "btn btn-primary withripple" }%>
