@@ -1431,6 +1431,10 @@ input#user_text.form-control{
     margin-bottom: 13px;
 }
 
+#user_nickname.nickname-edit{
+    padding-right: 432px;
+}
+
 #user_nickname{
     margin-top: 8px;
     padding-right: 152px;
@@ -1448,6 +1452,13 @@ input#user_text.form-control{
 
 #user_email{
     // padding-right: 425px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    outline: none;
+}
+
+.email-edit#user_email{
+    padding-right: 432px;
     padding-top: 5px;
     padding-bottom: 5px;
     outline: none;
