@@ -3,14 +3,40 @@
         <!--<small class='edit'>-->
           <%# link_to '編集', edit_answer_path(question.user_answer(@user.id)) %>
         <!--</small>-->
-            <div style="user_render">
-              <div class="bookreview_image_user" style="background-image: url(<%= comment.bookreview.image_url %>);"></div>
+      
+
+                  
+          <div style="comment_render_wrapper">
+              <div class="comment_render">
+                
+                <div class="bookreview_image_frame">
+                  <div class="bookreview_image_user" style="background-image: url(<%= comment.bookreview.image_url %>);">
+                  </div>
+                  
+                <div class="comment_frame">
+               <%= link_to '削除',"/bookreview/:bookreview_id/comments/#{comment.id}", method: :delete,class: "comment_delete"%>
+                
+                <%= link_to '編集',"/bookreview/:bookreview_id/comments/#{comment.id}/edit/", method: :get,class: "comment_edit"%></div>
+                </div>                
+
               
-              
-                    <div class="title"><%= comment.bookreview.title %></div>
-                    <span class="star"><span class="rating-star"><i class="star-actived rate-<%= comment.rate %>0"></i></span></span>
-                    <p><%= comment.created_at.to_s(:datetime) %></p>                          
-                  <div class="user_review"><%= comment.text %></div>
-                  <%= link_to '削除',"/bookreview/:bookreview_id/comments/#{comment.id}", method: :delete %>
-                  <%= link_to '編集',"/bookreview/:bookreview_id/comments/#{comment.id}/edit/", method: :get %>
-            </div>
+              <div class="comment_text_wrapper">
+                <h3 class="comment_title"><%= comment.bookreview.title %></h3>
+                            <p class="evaluation_comment">評価</p>
+                            <div class="evaluation_star_comment">
+                              <span class="star"><span class="rating-star"><i class="star-actived rate-<%= comment.rate %>0"></i></span></span>
+                            </div>
+                    
+                    <p class="comments_created_at_c">投稿日</p>
+                    <p class="comments_created_at_d"><%= comment.created_at.to_s(:datetime) %></p>
+                    
+                <div class="user_review"><%= comment.text %>
+                </div>
+                
+
+              </div>
+            
+              </div>
+
+            
+          </div>

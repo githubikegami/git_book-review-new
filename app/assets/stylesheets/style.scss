@@ -1,5 +1,31 @@
 
+// edit.html.erb
 
+.form-control{
+//   margin: 0 auto;
+//   text-align: center;
+}
+
+.form-group-edit2{
+  text-align: center;
+  transform: translate(0%, 20%);
+}
+
+.edit-review{
+    transform: translate(0%, 48%);
+    line-height: 55px;
+    text-align: center;
+}
+
+.col-lg-6-edit{
+  transform: translate(0%, -1383%);
+  text-align: center;
+}
+
+.col-lg-6{
+  transform: translate(0%, -6%);
+  text-align: center;
+}
 
 * {
   margin:0;
@@ -392,7 +418,7 @@ color: #FF4500;
 }
 
 .actions {
-    transform: translate(0%, 7%);
+    transform: translate(0%, 5%);
      text-align: center;
      width: 320px;
      margin: 0 auto;
@@ -675,26 +701,49 @@ hr{
 }
 
 .comments h2{
-	margin-bottom: 43px;
+	margin-bottom: 35px;
 }
 
 .user_comment{
 	margin-bottom: 35px;
 }
 
-.comments_created_at{
-transform: translateY(0%) translateX(0%);
+.evaluation{
+    transform: translateY(82%) translateX(0%);
     color: #555;
 }
 
-.comments strong a{
+.evaluation_star{
+     transform: translateY(-27%) translateX(7%);    // color: #555;
+}
+
+.comments_created_at_a{
+    transform: translateY(-6%) translateX(0%);
+    color: #555;
+}
+
+.comments_created_at_b{
+    transform: translateY(-109%) translateX(7%);
+    color: #555;
+}
+
+// .comments p{
+//     text-decoration: none;
+//     color: black;
+//     font-weight: lighter;
+//     display: block;
+//     transform: translateY(69%) translateX(0%);
+// }
+
+.comments p a{
     text-decoration: none;
     color: black;
     font-weight: lighter;
     display: block;
+    transform: translateY(15%) translateX(0%);
 }
 
-.comments strong a:hover{
+.comments p a:hover{
     color: #c45500;
     text-decoration: underline;
 }
@@ -1005,9 +1054,9 @@ span.btn-schedule.is-unsold-3 .icon-unsold:before {
     color: rgba(255, 255, 255, 0.05)
 }
 
-            .rating-star,
-            .star-actived {
-                line-height: 1.5;
+.rating-star,
+.star-actived {
+    line-height: 1.5;
             }
 
 
@@ -1025,26 +1074,174 @@ span.btn-schedule.is-unsold-3 .icon-unsold:before {
     display: flex;
 }
 
-.user_image img{
-    width: 150px;
-    height: 200px;
+.user_box{
+    width: 670px;
+    display: block;
+    transform: translateY(41%) translateX(0%);
 }
 
-.user_nickname{
+.user_image_frame{
+    width: 260px;
+    height: 269px;
+    margin-top: 10px;
+    margin-left: 16px;
+    min-height: 100%;
 }
+
+hr.style-one{
+    margin-top: 6px;
+    width: 669px;
+    border: solid;
+    border-width: thin;
+    border-color: #e7e7e7;
+}
+
+hr.style-two{
+    width: 900px;
+    border: solid;
+    border-width: thin;
+    border-color: #e7e7e7;
+}
+
+.user_image img{
+transform: translateY(85%) translateX(-7%);
+    max-width: 91%;
+}
+
+.user.profile{
+    display: block;
+transform: translateY(543%) translateX(-29%);
+text-decoration: none;
+    color: black;
+}
+
+.user.profile:hover{
+    color: #c45500;
+    text-decoration: underline;
+}
+
+.user_text{
+    letter-spacing: 1px;
+    // width: 582px;
+    word-wrap: break-word;
+    transform: translateY(-55%) translateX(0%);
+}
+
+h2.user_nickname{
+    // padding-bottom: 7px;
+    // // border-bottom: solid 3px;
+    // // border-width: thin;
+    // border-color: #e7e7e7;
+}
+
+.user_nicknam_book{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
 
 
 
 // user/_comment.html.erb
 
-.bookreview_image_user{
-    width: 150px;
-    height: 200px;
+
+
+.comment_render_wrapper{
+ width: 850px;
+ height: 300px;
 }
 
+.comment_render{
+    height: 225px;
+    display: flex;
+    width: 900px;
+    border-bottom: solid 1px;
+    border-width: thin;
+    border-color: #e7e7e7;
+    margin-bottom: 20px;
+}
 
+.bookreview_image_frame{
+    width: 130px;
+    height: 150px;
+    // margin-top: 10px;
+    // margin-left: 16px;
+    min-height: 100%
+}
 
+.bookreview_image_user{
+    // border: solid 1px;
+    // border-width: thin;
+    // border-color: #e7e7e7;
 
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 130px;
+    height: 150px;
+    transform: translateY(0%) translateX(0%);
+  //   height: 122px;
+  max-width: 100%;
+}
+
+.comment_text_wrapper{
+}
+
+h3.comment_title{
+    transform: translateY(6%) translateX(4%);
+}
+
+.evaluation_comment{
+    transform: translateY(86%) translateX(4%);
+}
+
+.evaluation_star_comment{
+    transform: translateY(-22%) translateX(13%);
+}
+
+.comments_created_at_c{
+    transform: translateY(2%) translateX(4%);
+}
+
+.comments_created_at_d{
+    transform: translateY(-99%) translateX(13%);
+}
+
+.user_review{
+    width: 716px;
+    word-wrap: break-word;
+    transform: translateY(-8%) translateX(4%);
+    letter-spacing: 1px;
+}
+
+.comment_frame{
+    margin-top: 12px;
+    margin-left: 15px;
+}
+
+.comment_delete{
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.comment_delete:hover{
+    color: #c45500;
+    text-decoration: underline;
+}
+
+.comment_edit{
+    margin-left: 0px;
+    text-decoration: none;
+    color: black;
+}
+
+.comment_edit:hover{
+    color: #c45500;
+    text-decoration: underline;
+}
 
 
 
@@ -1380,6 +1577,7 @@ p.rank-label{
         cursor: pointer;
         margin: 0 auto;
         margin-top: 28px;
+        transform: translateY(-228%) translateX(0%);
 }
 
 .form-group-submit input[type="submit"]:hover {
@@ -1388,8 +1586,10 @@ p.rank-label{
 }
 
 .user_text .form-control{
+    letter-spacing: 1px;
+    padding-left: 4px;
+    padding-top: 6px;
     width: 600px;
-    // height: 100px;
     outline: none;
     border: 1px solid #e7e7e7;
     color: black;
@@ -1433,7 +1633,7 @@ input#user_text.form-control{
 }
 
 .user-name-self{
-    margin-bottom: 13px;
+    margin-bottom: 98px;
 }
 
 #user_nickname.nickname-edit{
@@ -1478,11 +1678,13 @@ input#user_text.form-control{
 }
 
 .btn.btn-primary.withripple{
-    margin-top: 44px;
+    margin-top: 85px;
 }
 
 // views/comments/edit.html
 
-.form-group-edit{
-        height: calc(100vh - 110px);
+.form-group-edit3{
+    // height: 100%;
+    height: calc(100vh - 110px);
+    transform: translateY(-2%) translateX(0%);
 }

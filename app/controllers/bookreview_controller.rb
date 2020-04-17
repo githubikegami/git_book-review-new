@@ -1,5 +1,5 @@
 class BookreviewController < ApplicationController
-
+    
     def index
         @bookreviews = Bookreview.includes(:user).page(params[:page]).per(12)
     end

@@ -45,12 +45,18 @@
       <% if @remarks %>
         <% @remarks.each do |remark| %>
               <div class="user_comment">
-          <p>
-            <strong><%= link_to remark.user.nickname, "/users/#{remark.user_id}" %></strong>
+                
+                <% if user_signed_in? && current_user.id == remark.user_id %>
+            <p><%= link_to remark.user.nickname, "/users/#{remark.user_id}" %></p>
+                <% else %>
+            <p><%= remark.user.nickname %></p>
+                <% end %>
+                
             <br>
-            <span class="rating-star"><i class="star-actived rate-<%= remark.rate %>0"></i></span>
-            <p class="comments_created_at">投稿日 <%= remark.created_at.to_s(:datetime) %></p>
-            <br>
+            <p class="evaluation">評価</p>
+            <div class="evaluation_star"><span class="rating-star"><i class="star-actived rate-<%= remark.rate %>0"></i></span></div>
+            <p class="comments_created_at_a">投稿日 </p>
+            <p class="comments_created_at_b"><%= remark.created_at.to_s(:datetime) %></p>
             <%= remark.text %>
           </p>
           </div>
