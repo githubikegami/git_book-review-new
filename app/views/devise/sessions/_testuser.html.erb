@@ -1,0 +1,12 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <div class="field1_registrations_test">
+    <%= f.hidden_field :email ,value: "test@example.com" %>
+    <%= f.hidden_field :password ,value: "testtest" %>
+  </div>
+
+  <div class="actions-easy">
+   <%= f.submit "かんたんログイン" %>
+  </div>
+  
+<% end %>

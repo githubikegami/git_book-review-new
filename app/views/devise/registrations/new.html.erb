@@ -1,6 +1,8 @@
-<div class="wrapper_registrations_new">
+<div class="wrapper_registrations_new_cap">
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="wrapper_registrations_new">
 
   <div class="title">
     <h2>新規登録</h2>
@@ -38,6 +40,9 @@
   <div class="aid2">
 <%= render "devise/shared/links" %>
   </div>
+  
+</div>
+
 <% end %>
 </div>
 
