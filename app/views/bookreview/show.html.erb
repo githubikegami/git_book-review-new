@@ -46,12 +46,8 @@
         <% @remarks.each do |remark| %>
               <div class="user_comment">
                 
-                <% if user_signed_in? && current_user.id == remark.user_id %>
             <p><%= link_to remark.user.nickname, "/users/#{remark.user_id}" %></p>
-                <% else %>
-            <p><%= remark.user.nickname %></p>
-                <% end %>
-                
+
             <br>
             <p class="evaluation">評価</p>
             <div class="evaluation_star"><span class="rating-star"><i class="star-actived rate-<%= remark.rate %>0"></i></span></div>

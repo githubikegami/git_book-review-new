@@ -536,22 +536,27 @@ input[type="submit"]:hover {
     letter-spacing: 0.09em;
     font-size: 1.9rem;
     text-align: center;
-    margin-top: 150px;
-    margin-bottom: 50px;
+    padding-top: 150px;
+    padding-bottom: 50px;
 }
 
 .row{
+//   height: calc(100vh - 110px);
   width: 1170px;
-  height: 100%;
+//   height: 100%;
   margin: 0 auto;
 //   text-align:center;
-  padding:  10px;             /* 余白指定 */
+//   padding:  10px;             /* 余白指定 */
   display: flex;
   align-items:flex-start; 
   justify-content:space-around;
   flex-direction:row;
   flex-wrap:wrap;
   align-content:stretch;
+}
+
+.container_wrapper{
+    min-height: calc(100vh - 110px);
 }
 
 .container{
@@ -1233,7 +1238,7 @@ h2.user_nickname{
     height: 150px;
     // margin-top: 10px;
     // margin-left: 16px;
-    min-height: 100%
+    min-height: 100%;
 }
 
 .bookreview_image_user{
@@ -1243,7 +1248,7 @@ h2.user_nickname{
 
     background-size: contain;
     background-repeat: no-repeat;
-
+    transition-duration: 0.1s;
     width: 130px;
     height: 150px;
     transform: translateY(0%) translateX(0%);
@@ -1251,12 +1256,29 @@ h2.user_nickname{
   max-width: 100%;
 }
 
+.bookreview_image_user:hover{
+  opacity: 0.7;
+  transition-duration: 0.1s;
+}
+
 .comment_text_wrapper{
 }
 
 h3.comment_title{
     transform: translateY(6%) translateX(4%);
+    
 }
+
+h3.comment_title:hover{
+    color: #c45500;
+    text-decoration: underline;
+}
+
+.comment_title_a{
+    text-decoration: none;
+    color: black;
+}
+
 
 .evaluation_comment{
     transform: translateY(86%) translateX(4%);
@@ -1282,6 +1304,8 @@ h3.comment_title{
 }
 
 .comment_frame{
+    // width: 115px;
+    // height: 18px;
     margin-top: 12px;
     margin-left: 15px;
 }
@@ -1630,10 +1654,6 @@ p.rank-label{
 
 // users/edit.html
 
-.col-lg-wrapper{
-    transform: translateY(-10%) translateX(0%);
-}
-
 .form-group-submit input[type="submit"] {
         box-sizing: border-box;
         border: 1px solid rgb(0,0,0);
@@ -1672,9 +1692,17 @@ input#user_text.form-control{
 }
 
 .row.form{
-    margin-top: 145px; 
+    // min-height: 100vh;
+    position: relative;/*←相対位置*/
+    box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
     text-align: center;
     width: 320px;
+    transform: translateY(5%) translateX(0%);
+    height: calc(100vh - 110px);
+}
+
+.col-lg-wrapper{
+    // transform: translateY(-10%) translateX(0%);
 }
 
 .user_edit{
