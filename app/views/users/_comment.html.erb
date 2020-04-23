@@ -1,53 +1,28 @@
-
-          <%# question.user_answer(@user.id).text %>
-        <!--<small class='edit'>-->
-          <%# link_to '編集', edit_answer_path(question.user_answer(@user.id)) %>
-        <!--</small>-->
-      
-
-                  
-          <div style="comment_render_wrapper">
-              <div class="comment_render">
-                
-                <div class="bookreview_image_frame">
-                    <a class="bookreview_image_a" href="/bookreview/<%= comment.bookreview.id %>">
-                    <div class="bookreview_image_user" style="background-image: url(<%= comment.bookreview.image_url %>);">
-                </div>
-
-                <% if user_signed_in? && current_user.id == comment.user_id %>
-                
-                      <div class="comment_frame">
-                     <%= link_to '削除',"/bookreview/:bookreview_id/comments/#{comment.id}", method: :delete,class: "comment_delete"%>
-                     <%= link_to '編集',"/bookreview/:bookreview_id/comments/#{comment.id}/edit/", method: :get,class: "comment_edit"%>
-                     </div>
-                
-               <% else %>
-               
-                      <!--<div class="comment_frame"></div>-->
-
-                <% end %>
-                </div>
-              
-                <div class="comment_text_wrapper">
-                  
-                  
-                  <a class="comment_title_a" href="/bookreview/<%= comment.bookreview.id %>">
-                    <h3 class="comment_title"><%= comment.bookreview.title %></h3></a>
-                    
-                      
-                            <p class="evaluation_comment">評価</p>
-                            <div class="evaluation_star_comment">
-                              <span class="star"><span class="rating-star"><i class="star-actived rate-<%= comment.rate %>0"></i></span></span>
-                            </div>
-                    
-                    <p class="comments_created_at_c">投稿日</p>
-                    <p class="comments_created_at_d"><%= comment.created_at.to_s(:datetime) %></p>
-                    
-                    <div class="user_review"><%= comment.text %>
-                    </div>
-                </div>
-            
+<div style="comment_render_wrapper">
+    <div class="comment_render">
+        <div class="bookreview_image_frame">
+            <a class="bookreview_image_a" href="/bookreview/<%= comment.bookreview.id %>">
+            <div class="bookreview_image_user" style="background-image: url(<%= comment.bookreview.image_url %>);">
+            </div>
+          <% if user_signed_in? && current_user.id == comment.user_id %>
+              <div class="comment_frame">
+                 <%= link_to '削除',"/bookreview/:bookreview_id/comments/#{comment.id}", method: :delete,class: "comment_delete"%>
+                 <%= link_to '編集',"/bookreview/:bookreview_id/comments/#{comment.id}/edit/", method: :get,class: "comment_edit"%>
               </div>
-
-            
-          </div>
+            <% else %>
+          <% end %>
+        </div>
+    <div class="comment_text_wrapper">
+        <a class="comment_title_a" href="/bookreview/<%= comment.bookreview.id %>">
+          <h3 class="comment_title"><%= comment.bookreview.title %></h3></a>
+          <p class="evaluation_comment">評価</p>
+        <div class="evaluation_star_comment">
+          <span class="star"><span class="rating-star"><i class="star-actived rate-<%= comment.rate %>0"></i></span></span>
+        </div>
+          <p class="comments_created_at_c">投稿日</p>
+          <p class="comments_created_at_d"><%= comment.created_at.to_s(:datetime) %></p>
+        <div class="user_review"><%= comment.text %>
+        </div>
+    </div>
+    </div>
+</div>

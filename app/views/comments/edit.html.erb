@@ -1,20 +1,15 @@
-
-      <div class="form-group-edit3">
-    <%= form_for @comment,:url => {:action => :update} do |f| %>
+<div class="form-group-edit3">
+  <%= form_for @comment,:url => {:action => :update} do |f| %>
     <h2 class="edit-review">レビューの編集</h2>
       <div class="form-group-edit">
         <div class="form-group-edit2">
-        <%= f.text_area :text, placeholder: "入力してください", cols:"90", rows:"25", autofocus:"true", class:"form-control"%>
+          <%= f.text_area :text, placeholder: "入力してください", cols:"90", rows:"25", autofocus:"true", class:"form-control"%>
         </div>
-
         <div class="col-lg-6-edit">
           <%= f.label :rate, "あなたの評価" %>
           <%= f.number_field :rate, placeholder: "評価", max: 10, min: 1, html: { class: "search__query2", style: 'text-align2: right;' } %>
+        </div>
+          <%= f.submit "編集OK", class:"btn btn-primary withripple"%>
       </div>
-      <%= f.submit "編集OK", class:"btn btn-primary withripple"%>
-      
-      </div>
-      </div>
-    <% end %>
-
+  <% end %>
 </div>

@@ -1,4 +1,3 @@
-
 <div class="box_wrapper">
     <div class="box">
         <div class="box_image_frame">
@@ -8,20 +7,19 @@
             </a>
         </div>
         <div class="box_title_frame">
-            <div class="box_title" title="<%= bookreview.title %>">
-            <%= bookreview.title %>
+            <div class="box_title">
+              <%= bookreview.title %>
             </div>
             <div class="assess">
-                
-                      <% if bookreview.comments.present? %>
+                  <% if bookreview.comments.present? %>
                       <span class="rating-star">
-                        <i class="star-actived rate-<%= bookreview.comments.average(:rate).round %>0"></i>
+                          <i class="star-actived rate-<%= bookreview.comments.average(:rate).round %>0"></i>
                       </span>
-                      <% else %>
+                  <% else %>
                       <span class="rating-star">
-                        <i class="star-actived rate-0"></i>
+                          <i class="star-actived rate-0"></i>
                       </span>
-                      <% end %>                       
+                  <% end %>                       
             </div>
         </div>
     </div>

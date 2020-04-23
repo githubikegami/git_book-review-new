@@ -1,26 +1,21 @@
-<!--<div class="user_show_image">-->
 <div class="user_show">
-
     <div class="user_title">
         <div class="user_image_frame">
-            <div class="user_image"><%= image_tag @user.image %></div>
+            <%= image_tag @user.image, class:"user_image" %>
         </div>
         
-    
     <div class="user_box">
         <h2 class="user_nickname"><%= @user.nickname %>さん</h2>
-            <hr class="style-one">
-        <% if current_user.id == @user.id %>
+        <% if user_signed_in? && current_user.id == @user.id %>
             <%= link_to "プロフィール編集", edit_user_path(current_user), {:class => "user profile" }%>
         <% end %>
-        
         <p class="user_text"><%= @user.text %></p>
-        </div>
     </div>
-            <hr class="style-two">
-            
+    </div>
+    
+    <hr class="style-two">
     <% if @comment.present? %>
-<h3 class="user_nicknam_book"><span><%= @user.nickname %></span>さんのレビューした書籍一覧</span></h3>
+        <h3 class="user_nicknam_book"><span><%= @user.nickname %></span>さんのレビューした書籍一覧</span></h3>
         <%= render partial: 'users/comment', collection: @comment %>
     <% end %>
 </div>

@@ -1,45 +1,40 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>BookReview</title>
-    <link rel="stylesheet" href="normalize.css">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">-->
-  </head>
-  
-  <body>
-    <header>
-      <div class="user_nav">
-        <ul class="foo">
+  <html>
+    <head>
+      <title>BookReview</title>
+      <link rel="stylesheet" href="normalize.css">
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+    
+    <body>
+      <header>
+        <div class="user_nav">
+          <ul class="foo">
               <li><a href="/">BookReview</a></li>
               <li><a href="/bookreview">書籍一覧</a></li>
               <li><a href="/ranking">ランキング</a></li>
             <% if user_signed_in? %>
-                <li><a href="/users/<%= current_user.id %>">マイページ</a></li>
-                <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+              <li><a href="/users/<%= current_user.id %>">マイページ</a></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
             <% else %>
-                <li><%= link_to "ログイン", new_user_session_path, class: 'post' %></li>
-                <li><%= link_to "新規登録", new_user_registration_path, class: 'post' %></li>
+              <li><%= link_to "ログイン", new_user_session_path, class: 'post' %></li>
+              <li><%= link_to "新規登録", new_user_registration_path, class: 'post' %></li>
             <% end %>
-            
             <%= form_tag('/bookreview/search', method: :get,class: "search_form") do %>
               <input class="input_search" name="keyword" placeholder="書籍のタイトルを入力" type="text">
               <button class="button-search" title="検索" type="submit" value="Search"><span class="button-search2">Search</span></input>
             <% end %>
-        </ul>
-
-               <!--<form accept-charset="utf-8" action="/" class="js-search-submit" method="get">-->
-               <!--</form>-->
-      </div>
-    </header>
-    
-    <%= yield %>
-    
+          </ul>
+        </div>
+      </header>
+      
+      <%= yield %>
+      
       <footer>
         <small>Bookレビュー©2020.All Rights Reserved.</small>
       </footer>
-  </body>
-</html>
+    </body>
+  </html>
