@@ -1,6 +1,6 @@
 require "csv"
 
-products_csv = CSV.readlines("db/users.csv")
+products_csv = CSV.readlines("db/bookreviews.csv")
 products_csv.each do |row|
-  Product.create(email: row[1], encrypted_password: row[2], created_at: row[5], updated_at: row[6],nickname: row[7],text: row[8])
+  Product.create(title: row[1], description: row[2], price: row[3], publisher: row[4],release_date: row[5],image_url: row[6],author: row[7],created_at: row[8],updated_at: row[9])
 end
