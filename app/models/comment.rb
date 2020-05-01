@@ -1,4 +1,4 @@
 class Comment < ApplicationRecord
-    belongs_to :bookreview
-    belongs_to :user
+    belongs_to :bookreview, dependent: :destroy
+    belongs_to :user, dependent: :destroy
 end
