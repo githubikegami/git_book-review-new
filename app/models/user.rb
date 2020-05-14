@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  validates :email,:password,:password_confirmation,:nickname, presence: true
+  validates :email,:password,:password_confirmation,:nickname, presence: true, on: :registration
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
